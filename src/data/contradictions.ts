@@ -1,9 +1,9 @@
 // Seed data for The Contradiction Engine.
 //
 // The questions are real points of conflict in Gabriel García Márquez's
-// "Chronicle of a Death Foretold." The quotes below are PLACEHOLDER
-// paraphrases written for layout purposes — not the published translation.
-// Replace each `quote` and `page` with your own citations.
+// "Chronicle of a Death Foretold." Accounts are close paraphrase, not the
+// published translation. Entries still marked [Placeholder] are layout
+// filler awaiting real citations; page numbers are approximate throughout.
 
 export type Testimony = {
   witness: string; // "Victoria Guzmán"
@@ -26,32 +26,32 @@ export const contradictions: Contradiction[] = [
     question: "Was it raining on the morning of the murder?",
     testimonies: [
       {
-        witness: "Victoria Guzmán",
-        role: "the Nasar family cook",
+        witness: "Many people",
+        role: "as counted by the narrator",
         quote:
-          "[Placeholder] She was emphatic that it had not rained that morning, nor at any point that whole March — the day was clear, with a breeze off the water.",
-        page: 9,
+          "A number of witnesses recalled a radiant morning, with a breeze coming in off the banana groves. But most remembered funereal weather: a low sky, the smell of still water, and a thin drizzle falling at the moment of the killing.",
+        page: 4,
         yearsAfter: 27,
       },
       {
-        witness: "The greater part of those interviewed",
-        role: "townspeople, in aggregate",
+        witness: "Victoria Guzmán",
+        role: "the Nasar family cook",
         quote:
-          "[Placeholder] Most agreed the weather had been funereal: a low, overcast sky, the smell of still water, and a thin drizzle falling at the hour Santiago Nasar left his house.",
-        page: 4,
+          "Quartering rabbits at the kitchen table, she contradicted both camps without hedging: it had not rained that day, and it had not rained in all of February.",
+        page: 8,
         yearsAfter: 27,
       },
       {
         witness: "Plácida Linero",
         role: "Santiago Nasar's mother",
         quote:
-          "[Placeholder] She remembered only the sound of him going down the stairs in the dark, and could not say what the sky had been doing; it had never occurred to her that it would matter.",
-        page: 6,
+          "She never testified to the sky at all. What she carried from that morning was the dream: her son walking through a grove of timber trees while a soft drizzle fell — rain that existed only inside the omen.",
+        page: 3,
         yearsAfter: 27,
       },
     ],
     note:
-      "The chronicler cannot establish even the weather — the fact least touched by guilt or loyalty. If memory fails here, it warns the reader what the testimony on every harder question is worth.",
+      "The majority remembers the sky that suits the ending — memory arranging itself around the outcome. And with the dream's drizzle in the record, there is no way to tell whether the town remembers weather or remembers the omen.",
   },
   {
     id: "foreknowledge",
