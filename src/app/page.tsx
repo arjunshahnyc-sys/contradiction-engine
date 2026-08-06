@@ -33,7 +33,7 @@ export default function Page() {
         <h1 className="font-serif text-4xl lg:text-5xl">The Contradiction Engine</h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
           Twenty-seven years after the murder of Santiago Nasar, the witnesses
-          still do not agree — this file holds their accounts side by side, as
+          still do not agree. This file holds their accounts side by side, as
           given, without correction.
         </p>
       </header>
@@ -180,35 +180,22 @@ function Cover({ entered, onEnter }: { entered: boolean; onEnter: () => void }) 
         Chronicle of a Death Foretold
       </p>
 
-      {/* No likeness of Santiago Nasar exists — the empty portrait is the point. */}
-      <svg
-        viewBox="0 0 200 240"
-        className="w-40 lg:w-48"
-        role="img"
-        aria-label="An archival portrait frame holding an anonymous silhouette: no likeness of Santiago Nasar survives in the record"
-      >
-        <rect x="20" y="10" width="160" height="204" fill="var(--color-card)" stroke="var(--color-rule)" />
-        <rect x="32" y="22" width="136" height="152" fill="#e9e2d2" />
-        <circle cx="100" cy="82" r="25" fill="var(--color-ink-soft)" />
-        <path d="M56 174 v-16 q0 -30 44 -30 q44 0 44 30 v16 z" fill="var(--color-ink-soft)" />
-        <text
-          x="100"
-          y="198"
-          textAnchor="middle"
-          fontSize="9"
-          letterSpacing="2.5"
-          fill="var(--color-ink-soft)"
-          fontFamily="ui-monospace, monospace"
-        >
-          S. NASAR · 21
-        </text>
-      </svg>
+      <figure className="border border-rule bg-card p-3 pb-2">
+        <img
+          src="/cover.jpg"
+          alt="First edition cover of Crónica de una muerte anunciada, 1981"
+          className="w-32 lg:w-40"
+        />
+        <figcaption className="pt-2 text-center font-mono text-[9px] tracking-[0.2em] text-ink-soft uppercase">
+          First edition · 1981
+        </figcaption>
+      </figure>
 
       <p className="font-serif text-5xl lg:text-6xl">The Contradiction Engine</p>
 
       <p className="max-w-md text-sm leading-relaxed text-ink-soft">
-        No verified likeness of Santiago Nasar survives — only twenty-seven
-        years of testimony that cannot agree on the morning he died.
+        Twenty-seven years of testimony about one morning, and none of it in
+        agreement.
       </p>
 
       <button

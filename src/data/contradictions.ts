@@ -45,13 +45,13 @@ export const contradictions: Contradiction[] = [
         witness: "Plácida Linero",
         role: "Santiago Nasar's mother",
         quote:
-          "She never testified to the sky at all. What she carried from that morning was the dream: her son walking through a grove of timber trees while a soft drizzle fell — rain that existed only inside the omen.",
+          "She never testified to the sky at all. What she carried from that morning was the dream: her son walking through a grove of timber trees while a soft drizzle fell, rain that existed only inside the omen.",
         page: 3,
         yearsAfter: 27,
       },
     ],
     note:
-      "The majority remembers the sky that suits the ending — memory arranging itself around the outcome. And with the dream's drizzle in the record, there is no way to tell whether the town remembers weather or remembers the omen.",
+      "The majority remembers the sky that suits the ending: memory arranging itself around the outcome. And with the dream's drizzle in the record, there is no way to tell whether the town remembers weather or remembers the omen.",
   },
   {
     id: "foreknowledge",
@@ -61,7 +61,7 @@ export const contradictions: Contradiction[] = [
         witness: "Cristo Bedoya",
         role: "Santiago Nasar's closest friend",
         quote:
-          "[Placeholder] He searched the town to warn him and swore that when they had parted an hour earlier, Santiago showed no fear and no suspicion — he was doing sums for the wedding's cost.",
+          "[Placeholder] He searched the town to warn him and swore that when they had parted an hour earlier, Santiago showed no fear and no suspicion. He was doing sums for the wedding's cost.",
         page: 105,
         yearsAfter: 27,
       },
@@ -77,13 +77,13 @@ export const contradictions: Contradiction[] = [
         witness: "Divina Flor",
         role: "Victoria Guzmán's daughter",
         quote:
-          "[Placeholder] When he took her wrist in the kitchen that morning, she said, his hand felt frozen and stony, like the hand of a dead man — as if the body already knew what the man did not.",
+          "[Placeholder] When he took her wrist in the kitchen that morning, she said, his hand felt frozen and stony, like the hand of a dead man, as if the body already knew what the man did not.",
         page: 14,
         yearsAfter: 27,
       },
     ],
     note:
-      "A town full of people knew before the victim did. Whether Santiago died ignorant or died pretending decides whether the story is one of innocence or of fatalism — and the record supports both.",
+      "A town full of people knew before the victim did. Whether Santiago died ignorant or died pretending decides whether the story is one of innocence or of fatalism, and the record supports both.",
   },
   {
     id: "twins",
@@ -93,7 +93,7 @@ export const contradictions: Contradiction[] = [
         witness: "Clotilde Armenta",
         role: "proprietor of the milk shop",
         quote:
-          "[Placeholder] They announced the killing to anyone who came in, she said, and to her they did not look like men resolved on murder — they looked like men pleading for someone to prevent it.",
+          "[Placeholder] They announced the killing to anyone who came in, she said, and to her they did not look like men resolved on murder. They looked like men pleading for someone to prevent it.",
         page: 57,
         yearsAfter: 27,
       },
@@ -101,7 +101,7 @@ export const contradictions: Contradiction[] = [
         witness: "Colonel Lázaro Aponte",
         role: "mayor of the town",
         quote:
-          "[Placeholder] He took their knives away, watched them go, and judged the matter finished — it was butchers' bravado, the kind of talk drunk men use up by saying it aloud.",
+          "[Placeholder] He took their knives away, watched them go, and judged the matter finished: it was butchers' bravado, the kind of talk drunk men use up by saying it aloud.",
         page: 56,
         yearsAfter: 27,
       },
