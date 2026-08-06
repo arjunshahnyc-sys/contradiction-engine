@@ -80,7 +80,7 @@ export default function Page() {
             >
               {selected.testimonies.map((t, i) => (
                 <article
-                  key={t.witness}
+                  key={`${t.witness}-${i}`}
                   className="animate-rise border border-rule bg-card px-6 py-5"
                   style={{ animationDelay: `${i * STAGGER_MS}ms` }}
                 >

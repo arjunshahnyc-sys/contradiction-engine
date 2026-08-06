@@ -1,10 +1,9 @@
 // Seed data for The Contradiction Engine.
 //
 // The questions are real points of conflict in Gabriel García Márquez's
-// "Chronicle of a Death Foretold." Foreknowledge and twins quotes are
-// verbatim excerpts selected and supplied by the site's author; weather
-// accounts are close paraphrase. Entries still marked [Placeholder] are
-// layout filler awaiting real citations. Citations are by chapter.
+// "Chronicle of a Death Foretold." Weather accounts are close paraphrase;
+// all other quotes are verbatim excerpts selected and supplied by the
+// site's author. Citations are by chapter.
 
 export type Testimony = {
   witness: string; // "Victoria Guzmán"
@@ -137,29 +136,28 @@ export const contradictions: Contradiction[] = [
     testimonies: [
       {
         witness: "Angela Vicario",
-        role: "the returned bride",
+        role: "the returned bride, to the investigating magistrate",
         quote:
-          "[Placeholder] She produced the name without hesitation, as if she had found it waiting in the dark, and in every retelling across the years she never once varied it.",
-        chapter: 2,
-        yearsAfter: 23,
+          "When the investigating magistrate asked her with his oblique style if she knew who the decedent Santiago Nasar was, she answered him impassively: “He was my perpetrator.”",
+        chapter: 5,
       },
       {
         witness: "The investigating magistrate",
         role: "author of the official brief",
         quote:
-          "[Placeholder] He found not a single indication, however improbable, that the two had ever been seen together, and confessed his unease in the margin of the file.",
+          "On folio 416, in his own handwriting and with the druggist's red ink, he wrote a marginal note: Give me a prejudice and I will move the world. Under that paraphrase of discouragement, in a merry sketch with the same blood ink, he drew a heart pierced by an arrow.",
         chapter: 5,
       },
       {
-        witness: "The chronicler",
-        role: "narrator, friend of the dead man",
+        witness: "Angela Vicario",
+        role: "at her window, decades later",
         quote:
-          "[Placeholder] No one who knew them believed it. Santiago was vain, cautious with his prey, and never looked at her; she was the last person a man like him would have chosen.",
+          "I tried to get that truth out of her myself when I visited her the second time, with all my arguments in order, but she barely lifted her eyes from the embroidery to knock them down. “Don't beat it to death, cousin,” she told me. “He was the one.”",
         chapter: 4,
-        yearsAfter: 27,
+        yearsAfter: 23,
       },
     ],
     note:
-      "The entire machinery of the death rests on a single uncorroborated name. The one person who knows has repeated it for decades, and the record can neither convict nor clear the man it killed.",
+      "No one who knew them believed it; they belonged to different worlds, and the brief could not place them in the same room even once. Against all of that stands the one person who knows, giving the same name for the rest of her life.",
   },
 ];
