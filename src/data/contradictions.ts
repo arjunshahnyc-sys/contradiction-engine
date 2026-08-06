@@ -3,13 +3,13 @@
 // The questions are real points of conflict in Gabriel García Márquez's
 // "Chronicle of a Death Foretold." Accounts are close paraphrase, not the
 // published translation. Entries still marked [Placeholder] are layout
-// filler awaiting real citations; page numbers are approximate throughout.
+// filler awaiting real citations. Citations are by chapter.
 
 export type Testimony = {
   witness: string; // "Victoria Guzmán"
   role: string; // "the Nasar family cook"
   quote: string; // exact text from the novella
-  page: number;
+  chapter: number;
   yearsAfter?: number; // when they gave this account
 };
 
@@ -30,7 +30,7 @@ export const contradictions: Contradiction[] = [
         role: "as counted by the narrator",
         quote:
           "A number of witnesses recalled a radiant morning, with a breeze coming in off the banana groves. But most remembered funereal weather: a low sky, the smell of still water, and a thin drizzle falling at the moment of the killing.",
-        page: 4,
+        chapter: 1,
         yearsAfter: 27,
       },
       {
@@ -38,7 +38,7 @@ export const contradictions: Contradiction[] = [
         role: "the Nasar family cook",
         quote:
           "Quartering rabbits at the kitchen table, she contradicted both camps without hedging: it had not rained that day, and it had not rained in all of February.",
-        page: 8,
+        chapter: 1,
         yearsAfter: 27,
       },
       {
@@ -46,7 +46,7 @@ export const contradictions: Contradiction[] = [
         role: "Santiago Nasar's mother",
         quote:
           "She never testified to the sky at all. What she carried from that morning was the dream: her son walking through a grove of timber trees while a soft drizzle fell, rain that existed only inside the omen.",
-        page: 3,
+        chapter: 1,
         yearsAfter: 27,
       },
     ],
@@ -62,7 +62,7 @@ export const contradictions: Contradiction[] = [
         role: "Santiago Nasar's closest friend",
         quote:
           "[Placeholder] He searched the town to warn him and swore that when they had parted an hour earlier, Santiago showed no fear and no suspicion. He was doing sums for the wedding's cost.",
-        page: 105,
+        chapter: 1,
         yearsAfter: 27,
       },
       {
@@ -70,7 +70,7 @@ export const contradictions: Contradiction[] = [
         role: "the Nasar family cook",
         quote:
           "[Placeholder] At first she maintained that no one had told her anything before the fact. Years later she admitted she had known, and had said nothing, because in her heart she wanted him dead.",
-        page: 13,
+        chapter: 1,
         yearsAfter: 27,
       },
       {
@@ -78,7 +78,7 @@ export const contradictions: Contradiction[] = [
         role: "Victoria Guzmán's daughter",
         quote:
           "[Placeholder] When he took her wrist in the kitchen that morning, she said, his hand felt frozen and stony, like the hand of a dead man, as if the body already knew what the man did not.",
-        page: 14,
+        chapter: 1,
         yearsAfter: 27,
       },
     ],
@@ -94,7 +94,7 @@ export const contradictions: Contradiction[] = [
         role: "proprietor of the milk shop",
         quote:
           "[Placeholder] They announced the killing to anyone who came in, she said, and to her they did not look like men resolved on murder. They looked like men pleading for someone to prevent it.",
-        page: 57,
+        chapter: 3,
         yearsAfter: 27,
       },
       {
@@ -102,7 +102,7 @@ export const contradictions: Contradiction[] = [
         role: "mayor of the town",
         quote:
           "[Placeholder] He took their knives away, watched them go, and judged the matter finished: it was butchers' bravado, the kind of talk drunk men use up by saying it aloud.",
-        page: 56,
+        chapter: 3,
         yearsAfter: 27,
       },
       {
@@ -110,14 +110,14 @@ export const contradictions: Contradiction[] = [
         role: "one of the twins, to the investigating magistrate",
         quote:
           "[Placeholder] There was no power on earth, he declared, that could have stopped them once the matter of honor was set; they killed him openly and would do it again.",
-        page: 48,
+        chapter: 3,
       },
       {
         witness: "Prudencia Cotes",
         role: "Pablo Vicario's fiancée",
         quote:
           "[Placeholder] She knew what they were going to do and never thought of dissuading them. She would not have married a man who failed to do it.",
-        page: 62,
+        chapter: 3,
         yearsAfter: 27,
       },
     ],
@@ -133,7 +133,7 @@ export const contradictions: Contradiction[] = [
         role: "the returned bride",
         quote:
           "[Placeholder] She produced the name without hesitation, as if she had found it waiting in the dark, and in every retelling across the years she never once varied it.",
-        page: 47,
+        chapter: 2,
         yearsAfter: 23,
       },
       {
@@ -141,14 +141,14 @@ export const contradictions: Contradiction[] = [
         role: "author of the official brief",
         quote:
           "[Placeholder] He found not a single indication, however improbable, that the two had ever been seen together, and confessed his unease in the margin of the file.",
-        page: 99,
+        chapter: 5,
       },
       {
         witness: "The chronicler",
         role: "narrator, friend of the dead man",
         quote:
           "[Placeholder] No one who knew them believed it. Santiago was vain, cautious with his prey, and never looked at her; she was the last person a man like him would have chosen.",
-        page: 90,
+        chapter: 4,
         yearsAfter: 27,
       },
     ],

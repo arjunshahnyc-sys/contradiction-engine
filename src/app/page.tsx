@@ -90,7 +90,7 @@ export default function Page() {
                       <span className="text-ink-soft">, {t.role}</span>
                     </p>
                     <p className="font-mono text-xs text-ink-soft">
-                      p. {t.page}
+                      ch. {t.chapter}
                       {t.yearsAfter !== undefined && (
                         <span> · {t.yearsAfter} years after</span>
                       )}
