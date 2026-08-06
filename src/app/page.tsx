@@ -250,6 +250,8 @@ function Cover({ entered, onEnter }: { entered: boolean; onEnter: () => void }) 
 
       <p className="font-serif text-5xl lg:text-6xl">The Contradiction Engine</p>
 
+      <p className="font-serif text-lg italic text-ink-soft">by Arjun Shah</p>
+
       <p className="max-w-md text-sm leading-relaxed text-ink-soft">
         Twenty-seven years of testimony about one morning, and none of it in
         agreement.
