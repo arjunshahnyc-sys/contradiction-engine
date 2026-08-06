@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { contradictions, type Contradiction } from '@/data/contradictions'
+import { contradictions, verdict, type Contradiction } from '@/data/contradictions'
 
 const STAGGER_MS = 140
 const CARD_ANIM_MS = 600
@@ -176,6 +176,24 @@ export default function Page() {
           </div>
         </main>
       </div>
+
+      <section
+        aria-labelledby="verdict-heading"
+        className="mt-24 border-t border-rule pt-12 lg:mt-32 lg:pt-16"
+      >
+        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-accent uppercase">
+          The record closes
+        </p>
+        <h2 id="verdict-heading" className="font-serif text-2xl lg:text-3xl">
+          The verdict, questioned
+        </h2>
+        <p className="mt-6 max-w-2xl font-mono text-sm text-ink-soft">
+          {verdict.finding}
+        </p>
+        <p className="mt-6 max-w-2xl font-serif text-xl leading-relaxed">
+          {verdict.body}
+        </p>
+      </section>
     </div>
     </>
   )
