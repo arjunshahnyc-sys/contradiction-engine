@@ -9,7 +9,8 @@ export type Testimony = {
   role: string; // "the Nasar family cook"
   quote: string; // exact text from the novella
   chapter: number;
-  yearsAfter?: number; // when they gave this account
+  yearsAfter?: number; // when they gave this account; 0 means the same morning
+  deceased?: boolean; // dead by the time the chronicle was assembled
 };
 
 export type Contradiction = {
@@ -39,6 +40,7 @@ export const contradictions: Contradiction[] = [
           "Victoria Guzman, the cook, was sure that it hadn't rained that day, or during the whole month of February. “On the contrary,” she told me when I came to see her, a short time before her death. “The sun warms things up earlier than in August.”",
         chapter: 1,
         yearsAfter: 27,
+        deceased: true,
       },
       {
         witness: "Plácida Linero",
@@ -63,6 +65,7 @@ export const contradictions: Contradiction[] = [
           "“I didn't warn him because I thought it was drunkards' talk,” she told me.",
         chapter: 1,
         yearsAfter: 27,
+        deceased: true,
       },
       {
         witness: "Divina Flor",
@@ -109,6 +112,7 @@ export const contradictions: Contradiction[] = [
         role: "mayor of the town, after confiscating the knives",
         quote: "“Now they haven't got anything to kill anybody with,” he said.",
         chapter: 3,
+        yearsAfter: 0,
       },
       {
         witness: "Pablo Vicario",
@@ -116,6 +120,7 @@ export const contradictions: Contradiction[] = [
         quote:
           "“There's no way out of this,” he told him. “It's as if it had already happened.”",
         chapter: 3,
+        yearsAfter: 0,
       },
       {
         witness: "Prudencia Cotes",

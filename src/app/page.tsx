@@ -9,13 +9,19 @@ const CARD_ANIM_MS = 600
 export default function Page() {
   const [entered, setEntered] = useState(false)
   const [selectedId, setSelectedId] = useState(contradictions[0].id)
-  const [resolved, setResolved] = useState(false)
+  const [phase, setPhase] = useState<'open' | 'reconciling' | 'failed'>('open')
 
   const selected = contradictions.find((c) => c.id === selectedId) as Contradiction
 
+  useEffect(() => {
+    if (phase !== 'reconciling') return
+    const t = setTimeout(() => setPhase('failed'), 1600)
+    return () => clearTimeout(t)
+  }, [phase])
+
   function select(id: string) {
     setSelectedId(id)
-    setResolved(false)
+    setPhase('open')
   }
 
   // The note, then the button, enter after the last card has landed.
@@ -74,8 +80,12 @@ export default function Page() {
             </h2>
 
             <div
-              className={`flex flex-col gap-5 transition-opacity duration-700 ${
-                resolved ? 'opacity-40' : ''
+              className={`flex flex-col gap-5 transition-all duration-700 ${
+                phase === 'reconciling'
+                  ? 'animate-jitter opacity-70 blur-[1.5px]'
+                  : phase === 'failed'
+                    ? 'opacity-40'
+                    : ''
               }`}
             >
               {selected.testimonies.map((t, i) => (
@@ -86,17 +96,37 @@ export default function Page() {
                 >
                   <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <p className="text-sm">
-                      <span className="font-semibold">{t.witness}</span>
+                      <span className="font-semibold">
+                        {t.witness}
+                        {t.deceased && (
+                          <span
+                            className="text-ink-soft"
+                            title="dead by the time the chronicle was assembled"
+                            aria-label="deceased"
+                          >
+                            {' '}†
+                          </span>
+                        )}
+                      </span>
                       <span className="text-ink-soft">, {t.role}</span>
                     </p>
                     <p className="font-mono text-xs text-ink-soft">
                       ch. {t.chapter}
                       {t.yearsAfter !== undefined && (
-                        <span> · {t.yearsAfter} years after</span>
+                        <span>
+                          {' '}·{' '}
+                          {t.yearsAfter === 0
+                            ? 'the same morning'
+                            : `${t.yearsAfter} years after`}
+                        </span>
                       )}
                     </p>
                   </div>
-                  <blockquote className="font-serif text-lg leading-relaxed">
+                  <blockquote
+                    className={`font-serif text-lg leading-relaxed ${
+                      t.deceased ? 'text-ink/60' : ''
+                    }`}
+                  >
                     {t.quote}
                   </blockquote>
                 </article>
@@ -112,26 +142,35 @@ export default function Page() {
 
             <div
               className="animate-rise mt-10"
-              style={{ animationDelay: resolved ? '0ms' : `${buttonDelay}ms` }}
+              style={{
+                animationDelay: phase === 'open' ? `${buttonDelay}ms` : '0ms',
+              }}
               aria-live="polite"
             >
-              {resolved ? (
+              {phase === 'open' && (
+                <button
+                  type="button"
+                  onClick={() => setPhase('reconciling')}
+                  className="border border-ink px-5 py-2.5 text-xs font-medium tracking-[0.2em] uppercase transition-colors hover:bg-ink hover:text-paper"
+                >
+                  Attempt consensus
+                </button>
+              )}
+              {phase === 'reconciling' && (
+                <p className="animate-pulse font-mono text-xs tracking-[0.2em] text-ink-soft uppercase">
+                  Reconciling accounts …
+                </p>
+              )}
+              {phase === 'failed' && (
                 <div className="border-t border-rule pt-6">
-                  <p className="font-serif text-lg italic">
-                    The record does not permit resolution.
+                  <p className="font-mono text-sm text-accent">
+                    ERROR: Consensus impossible. Testimony irreparably corrupted
+                    by time and guilt.
                   </p>
-                  <p className="mt-1 text-sm text-ink-soft">
+                  <p className="mt-2 font-serif text-lg italic">
                     Each account remains in the file as it was given.
                   </p>
                 </div>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => setResolved(true)}
-                  className="border border-ink px-5 py-2.5 text-xs font-medium tracking-[0.2em] uppercase transition-colors hover:bg-ink hover:text-paper"
-                >
-                  Resolve this
-                </button>
               )}
             </div>
           </div>
