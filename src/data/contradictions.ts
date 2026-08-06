@@ -1,9 +1,10 @@
 // Seed data for The Contradiction Engine.
 //
 // The questions are real points of conflict in Gabriel García Márquez's
-// "Chronicle of a Death Foretold." Accounts are close paraphrase, not the
-// published translation. Entries still marked [Placeholder] are layout
-// filler awaiting real citations. Citations are by chapter.
+// "Chronicle of a Death Foretold." Foreknowledge quotes are verbatim
+// excerpts selected and supplied by the site's author; weather accounts are
+// close paraphrase. Entries still marked [Placeholder] are layout filler
+// awaiting real citations. Citations are by chapter.
 
 export type Testimony = {
   witness: string; // "Victoria Guzmán"
@@ -58,32 +59,40 @@ export const contradictions: Contradiction[] = [
     question: "Did Santiago Nasar know he was being hunted?",
     testimonies: [
       {
-        witness: "Cristo Bedoya",
-        role: "Santiago Nasar's closest friend",
-        quote:
-          "[Placeholder] He searched the town to warn him and swore that when they had parted an hour earlier, Santiago showed no fear and no suspicion. He was doing sums for the wedding's cost.",
-        chapter: 1,
-        yearsAfter: 27,
-      },
-      {
         witness: "Victoria Guzmán",
         role: "the Nasar family cook",
         quote:
-          "[Placeholder] At first she maintained that no one had told her anything before the fact. Years later she admitted she had known, and had said nothing, because in her heart she wanted him dead.",
+          "“I didn't warn him because I thought it was drunkards' talk,” she told me.",
         chapter: 1,
         yearsAfter: 27,
       },
       {
         witness: "Divina Flor",
-        role: "Victoria Guzmán's daughter",
+        role: "her daughter",
         quote:
-          "[Placeholder] When he took her wrist in the kitchen that morning, she said, his hand felt frozen and stony, like the hand of a dead man, as if the body already knew what the man did not.",
+          "She, on the other hand, didn't warn him because she was nothing but a frightened child at the time, incapable of a decision of her own, and she'd been all the more frightened when he grabbed her by the wrist with a hand that felt frozen and stony, like the hand of a dead man.",
         chapter: 1,
+        yearsAfter: 27,
+      },
+      {
+        witness: "Margot",
+        role: "the narrator's sister, with him on the docks",
+        quote:
+          "“He didn't seem to be chilly and was only thinking about what the wedding must have cost,” she told me.",
+        chapter: 1,
+        yearsAfter: 27,
+      },
+      {
+        witness: "Nahir Miguel",
+        role: "Flora Miguel's father, the one who finally told him",
+        quote:
+          "“He turned pale and lost control in such a way that it was impossible to think that he was pretending,” he told me.",
+        chapter: 5,
         yearsAfter: 27,
       },
     ],
     note:
-      "A town full of people knew before the victim did. Whether Santiago died ignorant or died pretending decides whether the story is one of innocence or of fatalism, and the record supports both.",
+      "A written warning lay under his door the whole time, unread. His calm on the docks argues he never knew; how long Victoria Guzmán took to admit what she knew argues how badly the town needed him to have known.",
   },
   {
     id: "twins",
