@@ -1,9 +1,8 @@
 // Seed data for The Contradiction Engine.
 //
 // The questions are real points of conflict in Gabriel García Márquez's
-// "Chronicle of a Death Foretold." Weather accounts are close paraphrase;
-// all other quotes are verbatim excerpts selected and supplied by the
-// site's author. Citations are by chapter.
+// "Chronicle of a Death Foretold." All quotes are verbatim excerpts
+// selected and supplied by the site's author. Citations are by chapter.
 
 export type Testimony = {
   witness: string; // "Victoria Guzmán"
@@ -29,7 +28,7 @@ export const contradictions: Contradiction[] = [
         witness: "Many people",
         role: "as counted by the narrator",
         quote:
-          "A number of witnesses recalled a radiant morning, with a breeze coming in off the banana groves. But most remembered funereal weather: a low sky, the smell of still water, and a thin drizzle falling at the moment of the killing.",
+          "Many people coincided in recalling that it was a radiant morning with a sea breeze coming in through the banana groves, as was to be expected in a fine February of that period. But most agreed that the weather was funereal, with a cloudy, low sky and the thick smell of still waters, and that at the moment of the misfortune a thin drizzle was falling like the one Santiago Nasar had seen in his dream grove.",
         chapter: 1,
         yearsAfter: 27,
       },
@@ -37,15 +36,15 @@ export const contradictions: Contradiction[] = [
         witness: "Victoria Guzmán",
         role: "the Nasar family cook",
         quote:
-          "Quartering rabbits at the kitchen table, she contradicted both camps without hedging: it had not rained that day, and it had not rained in all of February.",
+          "Victoria Guzman, the cook, was sure that it hadn't rained that day, or during the whole month of February. “On the contrary,” she told me when I came to see her, a short time before her death. “The sun warms things up earlier than in August.”",
         chapter: 1,
         yearsAfter: 27,
       },
       {
         witness: "Plácida Linero",
-        role: "Santiago Nasar's mother",
+        role: "Santiago Nasar's mother, recalling the dream",
         quote:
-          "She never testified to the sky at all. What she carried from that morning was the dream: her son walking through a grove of timber trees while a soft drizzle fell, rain that existed only inside the omen.",
+          "He'd dreamed he was going through a grove of timber trees where a gentle drizzle was falling, and for an instant he was happy in his dream, but when he awoke he felt completely spattered with bird shit.",
         chapter: 1,
         yearsAfter: 27,
       },
