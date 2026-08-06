@@ -1,10 +1,10 @@
 // Seed data for The Contradiction Engine.
 //
 // The questions are real points of conflict in Gabriel García Márquez's
-// "Chronicle of a Death Foretold." Foreknowledge quotes are verbatim
-// excerpts selected and supplied by the site's author; weather accounts are
-// close paraphrase. Entries still marked [Placeholder] are layout filler
-// awaiting real citations. Citations are by chapter.
+// "Chronicle of a Death Foretold." Foreknowledge and twins quotes are
+// verbatim excerpts selected and supplied by the site's author; weather
+// accounts are close paraphrase. Entries still marked [Placeholder] are
+// layout filler awaiting real citations. Citations are by chapter.
 
 export type Testimony = {
   witness: string; // "Victoria Guzmán"
@@ -102,30 +102,28 @@ export const contradictions: Contradiction[] = [
         witness: "Clotilde Armenta",
         role: "proprietor of the milk shop",
         quote:
-          "[Placeholder] They announced the killing to anyone who came in, she said, and to her they did not look like men resolved on murder. They looked like men pleading for someone to prevent it.",
+          "“That's not why,” said Clotilde Armenta. “It's to spare those poor boys from the horrible duty that's fallen on them.”",
         chapter: 3,
         yearsAfter: 27,
       },
       {
         witness: "Colonel Lázaro Aponte",
-        role: "mayor of the town",
-        quote:
-          "[Placeholder] He took their knives away, watched them go, and judged the matter finished: it was butchers' bravado, the kind of talk drunk men use up by saying it aloud.",
+        role: "mayor of the town, after confiscating the knives",
+        quote: "“Now they haven't got anything to kill anybody with,” he said.",
         chapter: 3,
-        yearsAfter: 27,
       },
       {
-        witness: "Pedro Vicario",
-        role: "one of the twins, to the investigating magistrate",
+        witness: "Pablo Vicario",
+        role: "one of the twins, to his wavering brother",
         quote:
-          "[Placeholder] There was no power on earth, he declared, that could have stopped them once the matter of honor was set; they killed him openly and would do it again.",
+          "“There's no way out of this,” he told him. “It's as if it had already happened.”",
         chapter: 3,
       },
       {
         witness: "Prudencia Cotes",
         role: "Pablo Vicario's fiancée",
         quote:
-          "[Placeholder] She knew what they were going to do and never thought of dissuading them. She would not have married a man who failed to do it.",
+          "“I knew what they were up to,” she told me, “and I didn't only agree, I never would have married him if he hadn't done what a man should do.”",
         chapter: 3,
         yearsAfter: 27,
       },
