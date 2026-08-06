@@ -26,7 +26,7 @@ export const verdict = {
   finding:
     "Homicide in legitimate defense of honor. The Vicario brothers, absolved.",
   body:
-    "It has now been twenty-seven years, and the magistrate's file still remains incomplete. In addition, the Vicario twins were absolved by the courts. But the true verdict lies in the contradictions themselves. The town did not just witness a murder. They participated in it through their silence, assumptions, and their absolute adherence to a lethal code of honor. The contradiction engine continues to run because the town can never agree on the facts. All they can do is share the guilt.",
+    "Twenty-seven years on, the magistrate's file remains incomplete and the courts have absolved the Vicario twins. But the true verdict lies in the contradictions themselves. The townspeople did not just witness a murder. They participated in it through their silence, their assumptions, and their absolute adherence to a lethal code of honor. The contradiction engine keeps running because they can never agree on the facts. All they can do is share the guilt.",
 };
 
 export const contradictions: Contradiction[] = [
